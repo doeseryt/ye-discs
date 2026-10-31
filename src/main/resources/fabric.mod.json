@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "ye_discs",
+  "version": "${version}",
+  "name": "YE Discs",
+  "description": "Fifteen original instrumental music discs, one per Kanye West album era, with a vinyl-pressing craft. Fan tribute — no Kanye West audio.",
+  "authors": ["doeseryt"],
+  "contact": {
+    "homepage": "https://modrinth.com/mod/ye-discs",
+    "sources": "https://github.com/doeseryt/ye-discs"
+  },
+  "license": "MIT",
+  "icon": "assets/ye_discs/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["net.yediscs.YeDiscs"]
+  },
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "fabric-api": "*",
+    "minecraft": "~1.20.1",
+    "java": ">=17"
+  }
+}

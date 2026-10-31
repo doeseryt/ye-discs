@@ -1,0 +1,17 @@
+{
+  "college_dropout": { "subtitle": "subtitles.item.music_disc", "sounds": [{"name": "ye_discs:ye_discs_college_dropout", "stream": true}] },
+  "late_registration": { "subtitle": "subtitles.item.music_disc", "sounds": [{"name": "ye_discs:ye_discs_late_registration", "stream": true}] },
+  "graduation": { "subtitle": "subtitles.item.music_disc", "sounds": [{"name": "ye_discs:ye_discs_graduation", "stream": true}] },
+  "808s": { "subtitle": "subtitles.item.music_disc", "sounds": [{"name": "ye_discs:ye_discs_808s", "stream": true}] },
+  "mbdtf": { "subtitle": "subtitles.item.music_disc", "sounds": [{"name": "ye_discs:ye_discs_mbdtf", "stream": true}] },
+  "watch_the_throne": { "subtitle": "subtitles.item.music_disc", "sounds": [{"name": "ye_discs:ye_discs_watch_the_throne", "stream": true}] },
+  "yeezus": { "subtitle": "subtitles.item.music_disc", "sounds": [{"name": "ye_discs:ye_discs_yeezus", "stream": true}] },
+  "tlop": { "subtitle": "subtitles.item.music_disc", "sounds": [{"name": "ye_discs:ye_discs_tlop", "stream": true}] },
+  "ye": { "subtitle": "subtitles.item.music_disc", "sounds": [{"name": "ye_discs:ye_discs_ye", "stream": true}] },
+  "jik": { "subtitle": "subtitles.item.music_disc", "sounds": [{"name": "ye_discs:ye_discs_jik", "stream": true}] },
+  "donda": { "subtitle": "subtitles.item.music_disc", "sounds": [{"name": "ye_discs:ye_discs_donda", "stream": true}] },
+  "donda2": { "subtitle": "subtitles.item.music_disc", "sounds": [{"name": "ye_discs:ye_discs_donda2", "stream": true}] },
+  "vultures1": { "subtitle": "subtitles.item.music_disc", "sounds": [{"name": "ye_discs:ye_discs_vultures1", "stream": true}] },
+  "vultures2": { "subtitle": "subtitles.item.music_disc", "sounds": [{"name": "ye_discs:ye_discs_vultures2", "stream": true}] },
+  "bully_era": { "subtitle": "subtitles.item.music_disc", "sounds": [{"name": "ye_discs:ye_discs_bully_era", "stream": true}] }
+}

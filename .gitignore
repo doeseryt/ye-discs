@@ -1,0 +1,12 @@
+.gradle/
+build/
+run/
+out/
+*.class
+*.wav
+remappedSrc/
+.gradle-downloads/
+.modrinth/
+.media/
+*.jar
+!gradle/wrapper/gradle-wrapper.jar
