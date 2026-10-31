@@ -2,9 +2,10 @@ package net.yediscs;
 
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.item.Item;
-import net.minecraft.item.MusicDiscItem;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
@@ -28,14 +29,19 @@ public class YeDiscs implements ModInitializer {
     }
 
     private void registerDisc(String album) {
-        Identifier soundId = new Identifier(MOD_ID, album);
+        Identifier soundId = Identifier.of(MOD_ID, album);
         SoundEvent registeredSound = Registry.register(Registries.SOUND_EVENT, soundId, SoundEvent.of(soundId));
 
-        Identifier itemId = new Identifier(MOD_ID, "ye_disc_" + album);
+        Identifier songId = Identifier.of(MOD_ID, album);
+        RegistryKey<net.minecraft.block.jukebox.JukeboxSong> songKey =
+                RegistryKey.of(RegistryKeys.JUKEBOX_SONG, songId);
+
+        Identifier itemId = Identifier.of(MOD_ID, "ye_disc_" + album);
         Rarity rarity = "mbdtf".equals(album) || "donda".equals(album) ? Rarity.EPIC : Rarity.RARE;
-        Item disc = new MusicDiscItem(0, registeredSound, new Item.Settings()
+        Item disc = new Item(new Item.Settings()
                 .maxCount(1)
-                .rarity(rarity), 0);
+                .rarity(rarity)
+                .jukeboxPlayable(songKey));
         Registry.register(Registries.ITEM, itemId, disc);
     }
 }
