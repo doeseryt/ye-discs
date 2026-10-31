@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-"""Generate 16x16 music disc textures — one disc per Kanye West album era.
+"""Generate 16x16 music disc textures — one disc per Kanye West album,
+styled for that album's most popular track.
 
 Programmatic pixel art: black disc, cream/vinyl-noise ring, each disc gets
-its own accent color from the era of the album. No copyrighted artwork is
+its own accent color tied to the track. No copyrighted artwork is
 reproduced.
 """
 import os
@@ -11,26 +12,26 @@ import struct
 import zlib
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-TEX = os.path.join(ROOT, "assets", "ye_discs", "textures", "item")
+TEX = os.path.join(ROOT, "src", "main", "resources", "assets", "ye_discs", "textures", "item")
 os.makedirs(TEX, exist_ok=True)
 
-# era palettes
+# track palettes
 ACCENTS = {
-    "college_dropout":    (203, 108, 74),   # dropout-bear tan / warm rust
-    "late_registration":  (122, 104, 84),   # orchestral umber
-    "graduation":         (208, 192, 74),   # drop-out bear gold / arena
-    "808s":               (70, 78, 105),    # glacier blue — heartless
-    "mbdtf":              (196, 60, 44),    # king-crimson red
-    "watch_the_throne":   (216, 176, 92),   # gilded brass
-    "yeezus":             (232, 232, 228),  # brutalist blank white
-    "tlop":               (240, 128, 176),  # faded orange-pink
-    "ye":                 (136, 176, 104),  # wyoming sage green
-    "jik":                (18, 100, 130),   # blue gospel water
-    "donda":              (12, 12, 12),     # pure black
-    "donda2":             (34, 34, 38),     # stem-player gunmetal
-    "vultures1":          (168, 156, 130),  # dusty bone
-    "vultures2":          (120, 108, 96),   # hollowed sequel tan
-    "bully_era":          (196, 157, 106),  # washed dusty gold — BULLY
+    "through_the_wire":  (203, 108, 74),   # warm chipmunk-soul rust
+    "gold_digger":       (216, 176, 92),   # gilded gold
+    "stronger":          (70, 78, 105),    # vocoder glacier blue
+    "heartless":         (88, 96, 128),    # frozen 808 blue-grey
+    "runaway":           (196, 60, 44),    # single-take crimson
+    "nias_in_paris":     (150, 128, 190),  # operatic royal purple
+    "black_skinhead":    (232, 232, 228),  # brutalist blank white
+    "famous":            (240, 128, 176),  # faded scandal pink
+    "ghost_town":        (136, 176, 104),  # wyoming sage green
+    "follow_god":        (18, 100, 130),   # blue gospel water
+    "hurricane":         (60, 84, 150),    # storm blue
+    "true_love":         (120, 108, 96),   # muted unfinished tan
+    "carnival":          (168, 156, 130),  # dusty funfair bone
+    "five_30":           (34, 34, 38),     # slowed stem-player gunmetal
+    "bully":             (196, 157, 106),  # washed dusty gold — BULLY
 }
 
 DISC = [
