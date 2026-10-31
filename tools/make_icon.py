@@ -10,20 +10,22 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, "src", "main", "resources", "assets", "ye_discs", "icon.png")
 os.makedirs(os.path.dirname(OUT), exist_ok=True)
 
-# era colors for the ring stripes (subset)
+# track colors for the ring stripes
 STRIPES = [
-    (203, 108, 74),  # college dropout
-    (122, 104, 84),  # late registration
-    (208, 192, 74),  # graduation
-    (70, 78, 105),   # 808s
-    (196, 60, 44),   # mbdtf
-    (216, 176, 92),  # wtt
-    (232, 232, 228), # yeezus
-    (240, 128, 176), # tlop
-    (136, 176, 104), # ye
-    (18, 100, 130),  # jik
-    (34, 34, 38),    # donda
-    (168, 156, 130), # vultures
+    (203, 108, 74),  # through the wire
+    (216, 176, 92),  # gold digger
+    (70, 78, 105),   # stronger
+    (88, 96, 128),   # heartless
+    (196, 60, 44),   # runaway
+    (150, 128, 190), # n** in paris
+    (232, 232, 228), # black skinhead
+    (240, 128, 176), # famous
+    (136, 176, 104), # ghost town
+    (18, 100, 130),  # follow god
+    (60, 84, 150),   # hurricane
+    (120, 108, 96),  # true love
+    (168, 156, 130), # carnival
+    (34, 34, 38),    # 530
     (196, 157, 106), # bully
 ]
 

@@ -14,30 +14,31 @@ public class YeDiscs implements ModInitializer {
 
     public static final String MOD_ID = "ye_discs";
 
-    // album ids in discography order
-    private static final String[] ALBUMS = {
-        "college_dropout", "late_registration", "graduation", "808s",
-        "mbdtf", "watch_the_throne", "yeezus", "tlop", "ye", "jik",
-        "donda", "donda2", "vultures1", "vultures2", "bully_era"
+    // one disc per album, named for that album's most popular track
+    private static final String[] TRACKS = {
+        "through_the_wire", "gold_digger", "stronger", "heartless",
+        "runaway", "nias_in_paris", "black_skinhead", "famous",
+        "ghost_town", "follow_god", "hurricane", "true_love",
+        "carnival", "five_30", "bully"
     };
 
     @Override
     public void onInitialize() {
-        for (String album : ALBUMS) {
-            registerDisc(album);
+        for (String track : TRACKS) {
+            registerDisc(track);
         }
     }
 
-    private void registerDisc(String album) {
-        Identifier soundId = Identifier.of(MOD_ID, album);
+    private void registerDisc(String track) {
+        Identifier soundId = Identifier.of(MOD_ID, track);
         SoundEvent registeredSound = Registry.register(Registries.SOUND_EVENT, soundId, SoundEvent.of(soundId));
 
-        Identifier songId = Identifier.of(MOD_ID, album);
+        Identifier songId = Identifier.of(MOD_ID, track);
         RegistryKey<net.minecraft.block.jukebox.JukeboxSong> songKey =
                 RegistryKey.of(RegistryKeys.JUKEBOX_SONG, songId);
 
-        Identifier itemId = Identifier.of(MOD_ID, "ye_disc_" + album);
-        Rarity rarity = "mbdtf".equals(album) || "donda".equals(album) ? Rarity.EPIC : Rarity.RARE;
+        Identifier itemId = Identifier.of(MOD_ID, "ye_disc_" + track);
+        Rarity rarity = "runaway".equals(track) || "carnival".equals(track) ? Rarity.EPIC : Rarity.RARE;
         Item disc = new Item(new Item.Settings()
                 .maxCount(1)
                 .rarity(rarity)
